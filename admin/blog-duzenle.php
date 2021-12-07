@@ -45,7 +45,7 @@ require_once('includes/sidebar.php');
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Blog Düzenle</h1>
 
-                    <form action="ayarlar/islem.php" method="post">
+                    <form action="ayarlar/islem.php" enctype="multipart/form-data" method="post">
 
                     <div class="row">
                     <div class="col-md-12">
