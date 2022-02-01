@@ -1,5 +1,0 @@
-RewriteEngine on
- 
-RewriteRule ^([0-9a-zA-Z-_]+)/([0-9]+)$  blog.php?sef=$1&blog_id=$2 [L,QSA]
-
-RewriteRule ^kategoriler/([0-9a-zA-Z-_]+)/([0-9]+)$  kategoridetay.php?sef=$1&kategoriler_id=$2 [L,QSA]
