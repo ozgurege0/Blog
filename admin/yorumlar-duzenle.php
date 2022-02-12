@@ -53,10 +53,10 @@ require_once('includes/sidebar.php');
                 <select name="yorumlar_status" class="form-control">
                   <?php 
                   if($vericek["yorumlar_status"]==1){
-                    echo '<option value="1">Aktif</option value="0"><option>Pasif</option>';
+                    echo '<option value="1">Aktif</option> <option value="0">Pasif</option>';
                   }
                   elseif($vericek["yorumlar_status"]==0){
-                    echo '<option value="0">Pasif</option><option value="1">Aktif</option>';
+                    echo '<option value="0">Pasif</option> <option value="1">Aktif</option>';
                   }
                   
                   ?>
