@@ -1,4 +1,12 @@
 <?php 
+require_once('admin/ayarlar/baglan.php');
+
+$info=$db->prepare("SELECT * FROM info where info_id=:id");
+      $info->execute(array(
+        'id'=>0
+      ));
+      $infocek=$info->fetch(PDO::FETCH_ASSOC);
+
 require_once('includes/header.php');
 ?>
   <body>
@@ -22,13 +30,13 @@ require_once('includes/navbar.php');
          <div class="container">
              <div class="row">
                  <div class="col-md-4">
-                    <i class="fas fa-phone"></i> İş Telefonum: +905449435919
+                    <i class="fas fa-phone"></i> İş Telefonum: <?php echo $infocek['info_tel'] ?>
                  </div>
                  <div class="col-md-4">
-                    <i class="fas fa-envelope"></i> İş Mail Adresim: info@panteryazilim.net
+                    <i class="fas fa-envelope"></i> İş Mail Adresim: <?php echo $infocek['info_mail'] ?>
                 </div>
                 <div class="col-md-4">
-                    <i class="fas fa-map-marker-alt"></i>  İş Yeri Adresim: İzmir/Konak/...
+                    <i class="fas fa-map-marker-alt"></i>  İş Yeri Adresim: <?php echo $infocek['info_adres'] ?>
                 </div>
             </div>
          </div>
