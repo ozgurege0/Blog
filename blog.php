@@ -61,13 +61,17 @@ require_once('includes/navbar.php');
   <!-- Footer -->
 
     <div class="container">
-        <div class="row mt-5">
+       <div class="card mt-5 shadow-lg">
+           <div class="card-body">
+                <div class="row mt-5">
             <div class="col-md-12">
                 <div class="text-center">
-                <img src="../<?php echo $blogcek['blog_img'] ?>" class="img-fluid rounded" alt="asd">
+                <img src="../<?php echo $blogcek['blog_img'] ?>" class="img-fluid rounded" width="400px">
             </div>
             </div>
             <p class="text-center mt-3"><?php echo html_entity_decode($blogcek['blog_icerik']) ?></p>
+           </div>
+       </div>
             
         </div>
        
