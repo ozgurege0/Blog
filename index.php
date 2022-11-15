@@ -61,10 +61,14 @@ require_once('includes/navbar.php');
             <div class="col-md-4">
             <div class="p-2 bd-highlight"><img src="<?php echo $blogcek['blog_img'] ?>" class="img-fluid rounded" alt=""></div>
             <div class="p-2 bd-highlight"><p><b>Yayınlanma Tarihi: </b><?php echo $blogcek['blog_tarih'] ?></p></div>
-            <p><b>Blog Yazarı: </b><?php echo $blogcek['blog_seoauthor'] ?></p>
+            <div class="p-2 bd-highlight"><p><b>Blog Yazarı: </b><?php echo $blogcek['blog_seoauthor'] ?></p></div>
         </div>
         <div class="col-md-8">
-            <div class="p-4 bd-highlight"><h3><a href="<?php echo $ayarlarcek['ayarlar_url'] ?><?=seo($blogcek["blog_title"]).'/'.$blogcek["blog_id"]?>"><?php echo $blogcek['blog_title'] ?></a></h3><?php echo html_entity_decode($blogcek['blog_description']) ?><div class="p-2 bd-highlight"><a href="<?php echo $ayarlarcek['ayarlar_url'] ?><?=seo($blogcek["blog_title"]).'/'.$blogcek["blog_id"]?>"><button class="btn btn-primary homebtn">Daha Fazla</button></a></div></div>
+            <div class="p-4 bd-highlight"><h3><a href="<?php echo $ayarlarcek['ayarlar_url'] ?><?=seo($blogcek["blog_title"]).'/'.$blogcek["blog_id"]?>"><?php echo $blogcek['blog_title'] ?></a></h3>
+            <div class="d-none d-sm-block"><?php echo html_entity_decode($blogcek['blog_description']) ?></div><div class="d-block d-sm-none"><?php echo substr(html_entity_decode($blogcek['blog_description']),0,64) ?>...</div> 
+            <div class=""><a href="<?php echo $ayarlarcek['ayarlar_url'] ?><?=seo($blogcek["blog_title"]).'/'.$blogcek["blog_id"]?>">
+                <button class="btn btn-primary homebtn">Daha Fazla</button>
+                </a></div></div>
         </div>    
         </div>
         </div>
@@ -123,7 +127,7 @@ if($sayfa == $sayfa_sayisi){
 </div>
         <!-- Blog Bölüm 4 -->
 
-               </div>
+               
 <!-- Blog -->
 <?php
 function seo($s) {
@@ -144,13 +148,13 @@ function seo($s) {
 
 
 
-<div class="container">
+
     <div class="hometitle">
         <h2 class="text-center mt-3">Blog Kategorilerimiz</h2>
     </div>
     <div class="mt-3"></div>
   
-    <div class="row">
+    <div class="row mx-auto">
 
     <?php 
       while ($kategorilercek=$kategoriler->fetch(PDO::FETCH_ASSOC)) { ?>
@@ -172,7 +176,7 @@ function seo($s) {
       
         
     </div>
-  </div>
+</div>
 
   <!-- Kategoriler -->
 
