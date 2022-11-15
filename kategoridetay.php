@@ -92,7 +92,9 @@ $seoayar=$db->prepare("SELECT * FROM seoayar where seoayar_id=:id");
             <p><b>Blog Yazarı: </b><?php echo $blogcek['blog_seoauthor'] ?></p>
         </div>
         <div class="col-md-8">
-            <div class="p-4 bd-highlight"><h3><a href="<?php echo $ayarlarcek['ayarlar_url'] ?><?=seo($blogcek["blog_title"]).'/'.$blogcek["blog_id"]?>"><?php echo $blogcek['blog_title'] ?></a></h3><?php echo html_entity_decode($blogcek['blog_description']) ?><div class="p-2 bd-highlight"><a href="<?php echo $ayarlarcek['ayarlar_url'] ?><?=seo($blogcek["blog_title"]).'/'.$blogcek["blog_id"]?>"><button class="btn btn-primary homebtn">Daha Fazla</button></a></div></div>
+            <div class="p-4 bd-highlight"><h3><a href="<?php echo $ayarlarcek['ayarlar_url'] ?><?=seo($blogcek["blog_title"]).'/'.$blogcek["blog_id"]?>"><?php echo $blogcek['blog_title'] ?></a></h3>
+              <div class="d-none d-sm-block"><?php echo html_entity_decode($blogcek['blog_description']) ?></div><div class="d-block d-sm-none"><?php echo substr(html_entity_decode($blogcek['blog_description']),0,64) ?>...</div> 
+            <div class="p-2 bd-highlight"><a href="<?php echo $ayarlarcek['ayarlar_url'] ?><?=seo($blogcek["blog_title"]).'/'.$blogcek["blog_id"]?>"><button class="btn btn-primary homebtn">Daha Fazla</button></a></div></div>
         </div>    
         </div>
         </div>
